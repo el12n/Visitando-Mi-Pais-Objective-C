@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ARw-un-7k5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Provincias-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="nXD-2M-fwe">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProvinciaCell" textLabel="AIm-CU-R3g" style="IBUITableViewCellStyleDefault" id="BM5-Ne-uvL">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BM5-Ne-uvL" id="ht6-0U-4g2">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AIm-CU-R3g">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="BMO-YC-Uh4" kind="show" identifier="ProvinciaToMunicipio" id="YJL-cl-Uty"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="2Gp-Lw-NVU"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="jvc-Jh-aDT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nXD-2M-fwe" secondAttribute="trailing" id="DmQ-as-zbo"/>
+                            <constraint firstItem="nXD-2M-fwe" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="H4Q-Q5-3fW"/>
+                            <constraint firstItem="nXD-2M-fwe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="laS-tc-gLz"/>
+                            <constraint firstItem="nXD-2M-fwe" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="y0o-Oc-Vly"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Provincias" id="EEW-gr-Wac">
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="OzN-Rs-WDP"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="nXD-2M-fwe" id="epS-wm-bj8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="355"/>
+        </scene>
+        <!--Municipio-->
+        <scene sceneID="vHd-VI-Atx">
+            <objects>
+                <viewController id="BMO-YC-Uh4" customClass="MunicipioViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="skd-yH-eOC"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Po-Uf-fTo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="baL-P0-TUo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="GCZ-Rv-kZn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MunicipioCell" textLabel="9ha-Dg-cya" style="IBUITableViewCellStyleDefault" id="bpR-Q9-5I2">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bpR-Q9-5I2" id="5oQ-Km-Gra">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9ha-Dg-cya">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Hw7-t6-7ue" kind="show" identifier="MunicipioToVisit" id="coA-Ri-9RW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BMO-YC-Uh4" id="uum-Lr-bul"/>
+                                    <outlet property="delegate" destination="BMO-YC-Uh4" id="S2s-Gr-Tpx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GCZ-Rv-kZn" firstAttribute="top" secondItem="baL-P0-TUo" secondAttribute="top" id="7OC-xu-y2l"/>
+                            <constraint firstItem="GCZ-Rv-kZn" firstAttribute="bottom" secondItem="9Po-Uf-fTo" secondAttribute="top" id="CaI-WV-qtQ"/>
+                            <constraint firstAttribute="trailing" secondItem="GCZ-Rv-kZn" secondAttribute="trailing" id="cqi-mL-RVY"/>
+                            <constraint firstItem="GCZ-Rv-kZn" firstAttribute="leading" secondItem="baL-P0-TUo" secondAttribute="leading" id="yhC-HN-xwh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Municipio" id="B8h-MU-c1z">
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="upX-iP-ryB"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="GCZ-Rv-kZn" id="e8F-1K-jaa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imG-qm-0vW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2047" y="355"/>
+        </scene>
+        <!--Visitar-->
+        <scene sceneID="kYe-VO-lUK">
+            <objects>
+                <viewController id="Hw7-t6-7ue" customClass="VisitView_Controller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XGd-cc-kpc"/>
+                        <viewControllerLayoutGuide type="bottom" id="oht-3p-UHR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NAt-oG-uGi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="vuT-Kk-fT0">
+                                <rect key="frame" x="0.0" y="438" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="448552162.25529701">
+                                    <!--2015-03-20 13:49:22 +0000-->
+                                </date>
+                            </datePicker>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oSh-8u-fhT">
+                                <rect key="frame" x="0.0" y="64" width="600" height="337"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvW-iq-LmU">
+                                <rect key="frame" x="255" y="408" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Mb8-CA-ka8">
+                                <rect key="frame" x="227" y="409" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vuT-Kk-fT0" firstAttribute="bottom" secondItem="oht-3p-UHR" secondAttribute="top" id="1fa-xg-uaM"/>
+                            <constraint firstItem="vuT-Kk-fT0" firstAttribute="leading" secondItem="NAt-oG-uGi" secondAttribute="leading" id="2Wh-Tj-gqO"/>
+                            <constraint firstItem="mvW-iq-LmU" firstAttribute="top" secondItem="oSh-8u-fhT" secondAttribute="bottom" constant="7" id="81y-ha-SgX"/>
+                            <constraint firstItem="mvW-iq-LmU" firstAttribute="leading" secondItem="Mb8-CA-ka8" secondAttribute="trailing" constant="8" symbolic="YES" id="DvC-3n-Y5j"/>
+                            <constraint firstItem="Mb8-CA-ka8" firstAttribute="bottom" secondItem="mvW-iq-LmU" secondAttribute="bottom" id="TPM-oB-zxj"/>
+                            <constraint firstItem="oSh-8u-fhT" firstAttribute="leading" secondItem="vuT-Kk-fT0" secondAttribute="leading" id="b0h-bj-r8L"/>
+                            <constraint firstItem="vuT-Kk-fT0" firstAttribute="trailing" secondItem="oSh-8u-fhT" secondAttribute="trailing" id="bAM-wp-Cah"/>
+                            <constraint firstItem="oSh-8u-fhT" firstAttribute="top" secondItem="XGd-cc-kpc" secondAttribute="bottom" id="eqE-30-knA"/>
+                            <constraint firstItem="mvW-iq-LmU" firstAttribute="centerX" secondItem="vuT-Kk-fT0" secondAttribute="centerX" id="luZ-Uh-er1"/>
+                            <constraint firstAttribute="trailing" secondItem="oSh-8u-fhT" secondAttribute="trailing" id="n92-Vu-rOg"/>
+                            <constraint firstItem="vuT-Kk-fT0" firstAttribute="top" secondItem="Mb8-CA-ka8" secondAttribute="bottom" constant="9" id="qCd-e8-LNk"/>
+                            <constraint firstItem="Mb8-CA-ka8" firstAttribute="top" secondItem="oSh-8u-fhT" secondAttribute="bottom" constant="8" symbolic="YES" id="vlp-yj-Juy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Visitar" id="mIi-cc-8XF">
+                        <barButtonItem key="backBarButtonItem" title="Atrás" id="WNt-IS-0si"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bqT-5U-PXO">
+                            <connections>
+                                <action selector="addVisit:" destination="Hw7-t6-7ue" id="kyL-2y-YDI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="vuT-Kk-fT0" id="IGi-oq-DiF"/>
+                        <outlet property="labelMapInfo" destination="mvW-iq-LmU" id="a5C-aH-ZeO"/>
+                        <outlet property="loadingMap" destination="Mb8-CA-ka8" id="YQo-oj-WbA"/>
+                        <outlet property="mapView" destination="oSh-8u-fhT" id="jia-Sx-rXX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PxF-re-AZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2825" y="360"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2as-Jm-RPF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ARw-un-7k5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pGK-Rq-Qeq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="tkH-4z-g3p"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x1M-cX-Mju" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="355"/>
+        </scene>
+    </scenes>
+</document>
